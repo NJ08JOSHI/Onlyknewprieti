@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#171310"><title>If You Only Knew, Preiti ♡</title>
+<style>
+:root{--bg:#171310;--paper:#f4eee6;--muted:#c5b7a7;--rose:#d8a6a0;--line:#ffffff20}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--paper);font-family:Georgia,'Times New Roman',serif;line-height:1.65}.hero{min-height:94svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:32px 22px;background:radial-gradient(ellipse at 50% 25%,#65483d,#2b211d 38%,#171310 75%)}.hero-inner{max-width:700px}.eyebrow,.kicker{font:11px Arial,sans-serif;letter-spacing:.25em;text-transform:uppercase;color:#e3c5b9}h1{font-size:clamp(42px,9vw,86px);line-height:1.04;font-weight:normal;margin:22px 0}h2{font-size:clamp(30px,6vw,48px);font-weight:normal;line-height:1.15;margin:10px 0 14px}.hero p{font-size:clamp(17px,3vw,22px);color:#e5d9cf;max-width:560px;margin:0 auto 30px}.cta{border:1px solid #e3c5b9;background:transparent;color:var(--paper);padding:13px 24px;border-radius:999px;cursor:pointer}section{padding:72px 20px}.wrap{width:min(1050px,100%);margin:auto}.section-head{text-align:center;max-width:650px;margin:0 auto 34px}.section-head p{color:var(--muted)}.intro-letter{max-width:740px;margin:auto;text-align:center;font-size:clamp(18px,3vw,24px);line-height:1.8;color:#eee1d5}.intro-letter em{color:#e7bdb2}.memory-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.memory,.video-card{border:1px solid var(--line);background:#ffffff06;border-radius:18px;overflow:hidden}.memory img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;background:#2a211c}.memory-body{padding:18px}.num{font:10px Arial,sans-serif;letter-spacing:.18em;color:var(--rose)}.memory h3{font-size:23px;font-weight:normal;margin:7px 0}.memory p,.video-caption{font-size:15px;color:var(--muted)}.song-slot{border-top:1px solid var(--line);padding-top:12px;font:12px Arial,sans-serif;color:#e0c5b9}.video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.video-card video{width:100%;display:block;max-height:540px;background:#090807}.video-caption{padding:15px 18px}.video-caption strong{display:block;color:var(--paper);font-size:20px;font-weight:normal}.letter{background:linear-gradient(145deg,#33251f,#201915);border:1px solid #ffffff18;border-radius:22px;padding:clamp(24px,6vw,55px);max-width:780px;margin:auto;text-align:center}.letter p{font-size:clamp(17px,2.8vw,21px);color:#e6d8cc}.signoff{font-style:italic;color:#e8bdb2;font-size:24px}footer{text-align:center;padding:32px 20px 46px;color:#a99b8f;font-size:13px}@media(max-width:760px){.memory-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.memory-body{padding:13px}.memory h3{font-size:19px}.video-grid{grid-template-columns:1fr}section{padding:55px 15px}}@media(max-width:420px){.memory-grid{grid-template-columns:1fr}.memory img{aspect-ratio:5/4}}
+
+/* Mobile fix: keep the same 3-column memory-card layout as the iPad,
+   and show each complete photo instead of cropping it with object-fit: cover. */
+.memory img{
+  width:100%;
+  height:auto;
+  aspect-ratio:auto;
+  object-fit:contain;
+  object-position:center;
+  background:#211b18;
+}
+@media(max-width:760px){
+  .memory-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+  .memory-body{padding:10px}
+  .memory h3{font-size:clamp(12px,3.2vw,19px);line-height:1.25}
+  .memory p{font-size:clamp(10px,2.5vw,14px);line-height:1.45}
+  .num{font-size:9px}
+  .song-slot{font-size:10px}
+  .video-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  section{padding:48px 12px}
+}
+@media(max-width:380px){
+  .memory-grid{gap:7px}
+  .memory-body{padding:8px}
+  .memory h3{font-size:12px}
+  .memory p{font-size:10px}
+}
+
+</style></head><body>
+<header class="hero"><div class="hero-inner"><div class="eyebrow">A little piece of my heart</div><h1>If You Only<br><i>Knew, Preiti</i> <span style="color:#e4aaa1">♡</span></h1><p>Some people bring a kind of happiness that feels like peace. This little page is for you.</p><button class="cta" onclick="document.querySelector('#intro').scrollIntoView({behavior:'smooth'})">Read my heart ♡</button><p style="font:11px Arial;letter-spacing:.08em;margin-top:20px">MADE WITH CARE, JUST FOR YOU</p></div></header>
+<section id="intro"><div class="wrap"><div class="section-head"><div class="kicker">Before you scroll</div><h2>For my little sukoon</h2></div><p class="intro-letter">I don't know if I always find the right words, but I know this: some moments make the world feel a little softer. <em>You bring me that kind of sukoon and khushi.</em> So here's a small collection of moments, with a little piece of what I feel behind each one.</p></div></section>
+<section><div class="wrap"><div class="section-head"><div class="kicker">The little things</div><h2>Memories that make me smile</h2><p>Every picture holds a feeling. These words are a first draft—we can make each one more personal together.</p></div><div class="memory-grid" id="memories"></div></div></section>
+<section><div class="wrap"><div class="section-head"><div class="kicker">Moving memories</div><h2>A few moments, kept close</h2><p>Tap play whenever you want. Videos won't start automatically.</p></div><div class="video-grid" id="videos"></div></div></section>
+<section><div class="wrap"><div class="letter"><div class="kicker">If you only knew…</div><h2>One thing I hope you feel</h2><p>I made this not to ask anything from you, and not to make you feel you owe me a reply. I just wanted you to know that your presence brings me happiness in a way that's hard to explain. I hope this page makes you smile, even if only for a little while.</p><p class="signoff">Always wishing you sukoon and khushi. ♡</p></div></div></section><footer>Made with care ♡ · If You Only Knew, Preiti</footer>
+<script>
+const memories=[
+["photo-01.jpeg","A moment worth keeping","Some scenes stay with you a little longer than others."],["photo-02.jpeg","Your little kind of magic","There's something about this moment that makes me smile."],["photo-03.jpeg","A little happiness","Not every beautiful feeling needs a big explanation."],["photo-04.jpeg","Soft moments","The kind of memory that feels calm just to look back on."],["photo-05.jpeg","Simply you","Sometimes the simplest moments are the ones we keep."],["photo-06.jpeg","A memory with a feeling","A picture can hold more warmth than a thousand words."],["photo-07.jpeg","A little sunshine","I hope life gives you a thousand reasons to smile."],["photo-08.jpeg","One for the heart","Some memories quietly become your favourite."],["photo-09.jpeg","The kind I remember","A small moment, but it leaves a soft feeling behind."],["photo-10.jpeg","Just because","Some things are simply worth appreciating."],["photo-11.jpeg","A beautiful little scene","If this makes you smile, this page is doing its job."],["photo-12.jpeg","A little sukoon","Some moments feel peaceful in a way you can't describe."],["photo-13.jpeg","Keep smiling","I hope happiness keeps finding you."]];
+document.getElementById('memories').innerHTML=memories.map((m,i)=>`<article class="memory"><img loading="lazy" src="photos/${m[0]}" alt="Memory ${i+1}"><div class="memory-body"><div class="num">MEMORY ${String(i+1).padStart(2,'0')}</div><h3>${m[1]}</h3><p>${m[2]}</p><div class="song-slot">♫ Song to be added later</div></div></article>`).join('');
+const clips=["video-01.mp4","video-02.mp4","video-03.mp4","video-04.mp4","video-05.mp4","video-06.mp4","video-07.mp4"];
+document.getElementById('videos').innerHTML=clips.map((v,i)=>`<article class="video-card"><video controls playsinline preload="metadata"><source src="videos/${v}" type="video/mp4">Your browser does not support this video.</video><div class="video-caption"><strong>A little moment</strong>Video ${String(i+1).padStart(2,'0')} · A moment to revisit</div></article>`).join('');
+document.querySelectorAll('video').forEach(current=>current.addEventListener('play',()=>document.querySelectorAll('video').forEach(other=>{if(other!==current)other.pause()})));
+</script></body></html>

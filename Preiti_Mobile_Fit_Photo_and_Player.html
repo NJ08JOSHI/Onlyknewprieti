@@ -1,0 +1,87 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#171310"><title>If You Could See Yourself Through My Eyes, Preiti ♡</title>
+<style>
+:root{--bg:#171310;--paper:#f4eee6;--muted:#c5b7a7;--rose:#d8a6a0;--line:#ffffff20}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--paper);font-family:Georgia,'Times New Roman',serif;line-height:1.65}.hero{min-height:94svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:32px 22px;background:radial-gradient(ellipse at 50% 25%,#65483d,#2b211d 38%,#171310 75%)}.hero-inner{max-width:700px}.eyebrow,.kicker{font:11px Arial,sans-serif;letter-spacing:.25em;text-transform:uppercase;color:#e3c5b9}h1{font-size:clamp(42px,9vw,86px);line-height:1.04;font-weight:normal;margin:22px 0}h2{font-size:clamp(30px,6vw,48px);font-weight:normal;line-height:1.15;margin:10px 0 14px}.hero p{font-size:clamp(17px,3vw,22px);color:#e5d9cf;max-width:560px;margin:0 auto 30px}.cta{border:1px solid #e3c5b9;background:transparent;color:var(--paper);padding:13px 24px;border-radius:999px;cursor:pointer}section{padding:72px 20px}.wrap{width:min(1050px,100%);margin:auto}.section-head{text-align:center;max-width:650px;margin:0 auto 34px}.section-head p{color:var(--muted)}.intro-letter{max-width:740px;margin:auto;text-align:center;font-size:clamp(18px,3vw,24px);line-height:1.8;color:#eee1d5}.intro-letter em{color:#e7bdb2}.memory-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.memory,.video-card{border:1px solid var(--line);background:#ffffff06;border-radius:18px;overflow:hidden}.memory img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;background:#2a211c}.memory-body{padding:18px}.num{font:10px Arial,sans-serif;letter-spacing:.18em;color:var(--rose)}.memory h3{font-size:23px;font-weight:normal;margin:7px 0}.memory p,.video-caption{font-size:15px;color:var(--muted)}.song-slot{border-top:1px solid var(--line);padding-top:12px;font:12px Arial,sans-serif;color:#e0c5b9}.video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.video-card video{width:100%;display:block;max-height:540px;background:#090807}.video-caption{padding:15px 18px}.video-caption strong{display:block;color:var(--paper);font-size:20px;font-weight:normal}.letter{background:linear-gradient(145deg,#33251f,#201915);border:1px solid #ffffff18;border-radius:22px;padding:clamp(24px,6vw,55px);max-width:780px;margin:auto;text-align:center}.letter p{font-size:clamp(17px,2.8vw,21px);color:#e6d8cc}.signoff{font-style:italic;color:#e8bdb2;font-size:24px}footer{text-align:center;padding:32px 20px 46px;color:#a99b8f;font-size:13px}@media(max-width:760px){.memory-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.memory-body{padding:13px}.memory h3{font-size:19px}.video-grid{grid-template-columns:1fr}section{padding:55px 15px}}@media(max-width:420px){.memory-grid{grid-template-columns:1fr}.memory img{aspect-ratio:5/4}}
+
+/* Mobile layout: single-column cards like the iPad's full-size card style.
+   Preserve each image's complete aspect ratio so no part of the photo is cropped. */
+.memory img{
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:auto;
+  object-fit:contain;
+  object-position:center;
+  background:#211b18;
+}
+@media(max-width:760px){
+  .memory-grid{grid-template-columns:1fr;gap:18px}
+  .memory-body{padding:18px}
+  .memory h3{font-size:23px;line-height:1.25}
+  .memory p{font-size:16px;line-height:1.55}
+  .num{font-size:10px}
+  .song-slot{font-size:13px}
+  .video-grid{grid-template-columns:1fr;gap:18px}
+  section{padding:55px 15px}
+}
+
+
+/* iPhone-inspired song player placeholders; connect audio sources later */
+.music-player{margin-top:15px;padding:14px;border-radius:18px;background:#d9c4b2;color:#2b211d;font-family:Arial,sans-serif}
+.player-top{display:flex;align-items:center;gap:12px}
+.album-art{width:64px;height:64px;flex:0 0 64px;border-radius:9px;background:linear-gradient(145deg,#806353,#cdb29a);display:grid;place-items:center;color:#f7eee5;font-size:25px}
+.track-info{min-width:0;flex:1}.track-title{font-size:15px;font-weight:700;white-space:normal}.track-artist{font-size:12px;color:#6c5546;margin-top:4px}.player-note{font-size:10px;color:#755f50;margin-top:5px}
+.player-progress{display:flex;align-items:center;gap:8px;margin-top:13px;font-size:10px;color:#6c5546}.progress-track{height:4px;background:#b39a87;border-radius:9px;flex:1;overflow:hidden}.progress-fill{height:100%;width:0;background:#35271f}.seek{min-width:0;flex:1;width:100%;accent-color:#35271f;cursor:pointer}.audio-status{font:11px Arial,sans-serif;color:#6c5546}
+.player-controls{display:flex;justify-content:center;align-items:center;gap:25px;margin-top:12px}.player-btn{border:0;background:transparent;color:#30231d;font-size:20px;cursor:pointer;padding:3px 8px}.player-btn.play{font-size:28px}.player-btn:disabled{opacity:.5;cursor:default}
+@media(max-width:420px){.music-player{padding:12px}.album-art{width:58px;height:58px;flex-basis:58px}}
+
+/* Compact iPhone view: photo and song controls fit together on screen */
+@media(max-width:600px){
+  .memory-grid{grid-template-columns:1fr;gap:12px}
+  .memory{border-radius:16px}
+  .memory img{width:100%;height:40vh;max-height:360px;min-height:220px;aspect-ratio:auto;object-fit:contain;background:#211b18}
+  .memory-body{padding:12px 14px 14px}
+  .num{font-size:9px;letter-spacing:.16em}
+  .memory h3{font-size:clamp(18px,5vw,22px);line-height:1.15;margin:5px 0}
+  .memory p{font-size:13px;line-height:1.35;margin:5px 0 8px}
+  .music-player{margin-top:8px;padding:9px 10px;border-radius:14px}
+  .player-top{gap:9px}
+  .album-art{width:43px;height:43px;flex-basis:43px;font-size:20px;border-radius:8px}
+  .track-title{font-size:14px;line-height:1.15}
+  .track-artist{font-size:11px;margin-top:3px}
+  .player-note{font-size:9px;margin-top:3px}
+  .player-progress{margin-top:7px;gap:6px;font-size:9px}
+  .player-controls{margin-top:5px}
+  .player-btn{width:34px;height:30px;min-height:30px}
+  .audio-status{font-size:10px}
+}
+@media(max-height:750px) and (max-width:600px){
+  .memory img{height:34vh;min-height:185px;max-height:270px}
+}
+</style></head><body>
+<header class="hero"><div class="hero-inner"><div class="eyebrow">A little piece of my heart</div><h1>If You Could See<br><i>Yourself Through My Eyes</i>, Preiti <span style="color:#e4aaa1">♡</span></h1><p>I wish you could see yourself the way I see you. Every picture, every little moment, and every song holds a feeling I sometimes can't put into words.</p><button class="cta" onclick="document.querySelector('#intro').scrollIntoView({behavior:'smooth'})">See yourself through my eyes ♡</button><p style="font:11px Arial;letter-spacing:.08em;margin-top:20px">A LITTLE PIECE OF MY PERSPECTIVE</p></div></header>
+<section id="intro"><div class="wrap"><div class="section-head"><div class="kicker">Before you scroll</div><h2>The way I see you</h2></div><p class="intro-letter">I may not always know how to explain what I feel, so I wanted to show you instead. This is how I see you through my eyes—not just how you look, but the warmth, happiness, and sukoon these little moments bring me. Each picture has its own feeling, and each song below a photo is one that makes me think of you.</p></div></section>
+<section><div class="wrap"><div class="section-head"><div class="kicker">Through my eyes</div><h2>What I see when I look at you</h2><p>Every picture has a feeling behind it. The song below it says a little more about what I see in you.</p></div><div class="memory-grid" id="memories"></div></div></section>
+<section><div class="wrap"><div class="section-head"><div class="kicker">The moments that stay with me</div><h2>Videos, feelings, and songs that remind me of you</h2><p>Play each little moment and discover the feeling it brings back to me.</p></div><div class="video-grid" id="videos"></div></div></section>
+<section><div class="wrap"><div class="letter"><div class="kicker">If you only knew…</div><h2>If you could see what I see</h2><p>I made this because I wanted you to see yourself from my side for a moment. The way a simple picture can make me smile, the way a song can suddenly remind me of you, and the quiet happiness your presence brings me. You don't have to find the perfect words or give me an answer. I just hope this little world helps you understand what I sometimes struggle to say.</p><p class="signoff">This is how I see you, Preiti. ♡</p></div></div></section><footer>Made with care ♡ · If You Only Knew, Preiti</footer>
+<script>
+const memories=[
+["photo-01.jpeg","The way this moment stays with me","This moment stayed with me for a reason."], ["photo-02.jpeg","A little thing I adore","This is one of those little things I find lovely about you."], ["photo-03.jpeg","The smile you bring","This picture says more to me than I can easily explain."], ["photo-04.jpeg","Your peaceful side","Looking at this brings a little calm to my mind."], ["photo-05.jpeg","Just the way I see you","It's the little details that make this moment feel special to me."], ["photo-06.jpeg","More than a picture","This picture carries a warmth I can't quite put into words."], ["photo-07.jpeg","You brighten a moment","This is how easily a little moment of yours can make me smile."], ["photo-08.jpeg","A feeling I keep","There's something about the way I see you here that stays with me."], ["photo-09.jpeg","A moment that lingers","A small moment, with a feeling that lasts a little longer."], ["photo-10.jpeg","Because it is you","Sometimes I just want you to know how lovely this moment looks to me."], ["photo-11.jpeg","Beautiful in my eyes","I hope you can see a little of what I see in you here."], ["photo-12.jpeg","My little sukoon","This one reminds me of the quiet sukoon I feel when I think of you."], ["photo-13.jpeg","Keep being you","I hope you keep finding little reasons to feel happy, too."]];
+// Keep MP3 files in the same GitHub folder as index.html. Filenames must match exactly.
+const songs=[
+ {title:"Teri Chand Baliyan",artist:"Mehmood J",file:"mehmood-j-teri-chand-baliyan.mp3"},
+ {title:"Main Agar Kahoon",artist:"Om Shanti Om",file:"Mein agar kahoo(1).mp3"},
+ {title:"Khoobsurat",artist:"Stree",file:"khoobsurat-stree.mp3"},
+ {title:"Pretty Woman",artist:"Kal Ho Naa Ho",file:"pretty-woman-kal-ho-naa.mp3"},
+ {title:"Rang Jo Lagyo",artist:"Atif Aslam",file:"atif-aslam-rang-jo-lagyo.mp3"},
+ {title:"Tumhe Jo Maine Dekha",artist:"Main Hoon Na",file:"tumhe-jo-maine-dekha-main-hoon-na.mp3"},
+ {title:"Rehbara",artist:"Abhijeet Srivastava · Shayra Apoorva",file:"rehbara-official-lyrical-video-abhijeet-srivastava-shayra-apoorva-unbound-recor_A4XTckOw.mp3"}
+];
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+document.getElementById('memories').innerHTML=memories.map((m,i)=>{const song=songs[i];return `<article class="memory"><img loading="lazy" src="photos/${m[0]}" alt="Memory ${i+1}"><div class="memory-body"><div class="num">MEMORY ${String(i+1).padStart(2,'0')}</div><h3>${m[1]}</h3><p>${m[2]}</p><div class="music-player" data-player="${i}"><div class="player-top"><div class="album-art" aria-hidden="true">♫</div><div class="track-info"><div class="track-title">${song?esc(song.title):'Song coming soon ♡'}</div><div class="track-artist">${song?esc(song.artist):'Upload a different song for this photo'}</div><div class="player-note">${song?'A song that reminds me of you ♡':'This slot will be ready when its MP3 is added.'}</div></div><span aria-hidden="true">♪</span></div>${song?`<audio class="memory-audio" preload="metadata" src="${esc(song.file)}"></audio><div class="player-progress"><span class="elapsed">0:00</span><input class="seek" type="range" min="0" max="100" value="0" aria-label="Seek ${esc(song.title)}"><span class="duration">0:00</span></div><div class="player-controls"><button class="player-btn play" type="button" aria-label="Play ${esc(song.title)}">▶</button><span class="audio-status" aria-live="polite">Tap play to listen</span></div>`:`<div class="player-progress"><span>—</span><div class="progress-track"><div class="progress-fill"></div></div><span>—</span></div><div class="player-controls"><button class="player-btn" disabled type="button">▶</button><span class="audio-status">Waiting for song ${i+1}</span></div>`}</div></div></article>`}).join('');
+// One song at a time; play, pause, seek, and duration are functional on each uploaded track.
+const fmt=t=>{if(!Number.isFinite(t))return '0:00';const m=Math.floor(t/60),sec=Math.floor(t%60);return `${m}:${String(sec).padStart(2,'0')}`};
+document.querySelectorAll('.music-player').forEach(player=>{const audio=player.querySelector('audio');if(!audio)return;const btn=player.querySelector('.play'),seek=player.querySelector('.seek'),elapsed=player.querySelector('.elapsed'),duration=player.querySelector('.duration'),status=player.querySelector('.audio-status');btn.addEventListener('click',()=>{if(audio.paused){document.querySelectorAll('.memory-audio').forEach(other=>{if(other!==audio){other.pause();const otherPlayer=other.closest('.music-player');otherPlayer.querySelector('.play').textContent='▶';otherPlayer.querySelector('.audio-status').textContent='Paused';}});audio.play().then(()=>{btn.textContent='❚❚';status.textContent='Playing now'}).catch(()=>{status.textContent='Could not load MP3 — check filename'});}else{audio.pause();btn.textContent='▶';status.textContent='Paused';}});audio.addEventListener('loadedmetadata',()=>{duration.textContent=fmt(audio.duration)});audio.addEventListener('timeupdate',()=>{elapsed.textContent=fmt(audio.currentTime);if(Number.isFinite(audio.duration)&&audio.duration>0)seek.value=String(audio.currentTime/audio.duration*100)});seek.addEventListener('input',()=>{if(Number.isFinite(audio.duration)&&audio.duration>0)audio.currentTime=Number(seek.value)/100*audio.duration});audio.addEventListener('ended',()=>{btn.textContent='▶';status.textContent='Finished ♡';seek.value='0'});audio.addEventListener('error',()=>{status.textContent='MP3 not found — verify GitHub filename'});});
+const clips=["video-01.mp4","video-02.mp4","video-03.mp4","video-04.mp4","video-05.mp4","video-06.mp4","video-07.mp4"];
+document.getElementById('videos').innerHTML=clips.map((v,i)=>`<article class="video-card"><video controls playsinline preload="metadata"><source src="videos/${v}" type="video/mp4">Your browser does not support this video.</video><div class="video-caption"><strong>A little moment</strong>Video ${String(i+1).padStart(2,'0')} · A moment to revisit</div></article>`).join('');
+document.querySelectorAll('video').forEach(current=>current.addEventListener('play',()=>document.querySelectorAll('video').forEach(other=>{if(other!==current)other.pause()})));
+</script></body></html>
